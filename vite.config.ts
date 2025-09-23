@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
     host: "localhost",
     port: 2026,
     proxy: {
-      '/api': {
+      '/votingBE': {
         target: 'http://localhost:2027',
         changeOrigin: true,
         secure: false,
