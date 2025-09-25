@@ -9,18 +9,17 @@ export default defineConfig(({ mode }) => ({
   build: {
     outDir: "dist"
   },
-  // server: {
-  //   host: "localhost",
-  //   port: 2026,
-  //   proxy: {
-  //     '/api': {
-  // // target: 'http://localhost:2028',
-  //       target: 'http://localhost:9090',
-  //       changeOrigin: true,
-  //       secure: false,
-  //     },
-  //   },
-  // },
+  server: {
+    host: "localhost",
+    port: 2026,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:9090',
+        changeOrigin: true,
+        secure: false,
+      },
+    },
+  },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
     alias: {
