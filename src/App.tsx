@@ -22,7 +22,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <AuthProvider>
-        <BrowserRouter basename="/onlinevoting">
+        <BrowserRouter basename="/"> {/*basename="/onlinevoting"*/}
           <AppLayout>
             <Routes>
               <Route path="/" element={<Index />} />
